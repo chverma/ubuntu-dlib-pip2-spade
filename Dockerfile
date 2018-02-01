@@ -24,7 +24,6 @@ RUN apt-get update && apt-get install -y \
     zip \
     sudo \
     wget \
-    python-tk \
     iputils-ping \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -54,4 +53,4 @@ RUN cd ~ && \
     cd spade && \
     python setup.py install
 
-RUN pip install pillow sklearn scipy matplotlib requests face_recognition
+RUN pip install python-tk pillow sklearn scipy matplotlib requests face_recognition
