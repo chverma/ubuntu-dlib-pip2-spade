@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     sudo \
     wget \
-    iputils-ping
+    iputils-ping \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN apt-get update && apt-get install -y python-opencv
@@ -47,6 +47,8 @@ RUN cd ~ && \
 RUN cd ~ && \
     wget https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py
+
+RUN apt-get install -y python-tk
 
 RUN cd ~ && \
     git clone https://github.com/javipalanca/spade.git && \
