@@ -51,8 +51,6 @@ RUN cd ~ && \
 RUN cd ~ && \
     git clone https://github.com/javipalanca/spade.git && \
     cd spade && \
-    python setup.py install && \
-    adress = ifconfig | grep '172' | awk {'print $2'} && \
-    python configure.py $adress
+    python setup.py install
 
 RUN pip install pillow sklearn scipy matplotlib requests
