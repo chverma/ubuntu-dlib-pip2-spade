@@ -24,8 +24,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     sudo \
     wget \
-    iputils-ping \
-    python-tk \
+    iputils-ping
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN apt-get update && apt-get install -y python-opencv
