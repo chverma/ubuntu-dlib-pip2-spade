@@ -44,7 +44,7 @@ RUN cd ~ && \
 
 RUN cd ~ && \
     wget https://bootstrap.pypa.io/get-pip.py && \
-    pyhton get-pip.py
+    python get-pip.py
 
 RUN cd ~ && \
     git clone https://github.com/javipalanca/spade.git && \
