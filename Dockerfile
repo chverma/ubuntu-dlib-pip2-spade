@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     sudo \
     wget \
+    python-tk \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN apt-get update && apt-get install -y python-opencv
@@ -53,3 +54,5 @@ RUN cd ~ && \
     python setup.py install && \
     adress = ifconfig | grep '172' | awk {'print $2'} && \
     python configure.py $adress
+
+RUN pip install pillow sklearn scipy matplotlib requests
