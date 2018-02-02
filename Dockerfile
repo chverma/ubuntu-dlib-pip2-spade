@@ -55,4 +55,4 @@ RUN cd ~ && \
     cd spade && \
     python setup.py install
 
-RUN pip install pillow sklearn scipy matplotlib requests face_recognition
+RUN pip install pillow sklearn scipy matplotlib requests face_recognition flask
